@@ -1,0 +1,31 @@
+{
+  "name": "rework-font-names",
+  "version": "0.1.1",
+  "description": "Plugin for rework font names in CSS",
+  "author": "Pavlo Vozniuk <pavlo.vozniuk@gmail.com>",
+  "main": "index.js",
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pvoznyuk/rework-font-names.git"
+  },
+  
+  "bugs": {
+    "url": "https://github.com/pvoznyuk/rework-font-names/issues"
+  },
+  
+  "homepage": "https://github.com/pvoznyuk/rework-font-names",
+  
+  "keywords": [
+    "css",
+    "rework",
+    "font",
+    "font-family"
+  ],
+  
+  "dependencies": {
+    "rework-walk": "~1.0.0"
+  },
+  
+  "license": "MIT"
+}
