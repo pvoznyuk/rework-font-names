@@ -5,6 +5,10 @@ Font names plugin for Rework
 
 Allows for CSS to modify font-names in 'font' and 'font-family' rules
 
+## Install
+
+`npm install rework-font-names`
+
 ## Options
 
 Pass in an options object to configure the plugin. Possible options:
