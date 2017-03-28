@@ -12,7 +12,7 @@ Pass in an options object to configure the plugin. Possible options:
 * `replace`: replaces old value by new one (can be a string, array or function)
 * `prepend`: prepends new font(s) to font list (can be a string, array or function)
 * `append`: appends font(s) to font list (can be a string, array or function)
-* `ignore`: if rule has in font stack at least one font from ignore list, replace/prepend/append options can't be applied to this rule. Can be a string, array or function. You can also add '!important' and 'inherit' as option values, and all fonts stacks with '!important' or 'inherit' will be ignored. Default value forn `ignore` option is ['inherit'] 
+* `ignore`: if rule has in font stack at least one font from ignore list, replace/prepend/append options can't be applied to this rule. Can be a string, array or function. You can also add `!important` and `inherit` as option values, and all fonts stacks with `!important` or `inherit` will be ignored. Default value for `ignore` option is ['inherit'] 
 * `important`: how to rework !important;  possible values:
   * `keep`: default value, keeps !important where they are
   * `add`: adds !important for all acceptable font stacks (i.e. all ones except ignored ones)
