@@ -27,50 +27,56 @@ Functions for replace, prepend and apppend options can have four params:
 
 The following gulp snippet
 
-    var rework = require('gulp-rework');
-    rework.fontNames = require('rework-font-names');
- 
-    return gulp.src('app/styles/main.css')
-        .pipe(rework(rework.fontNames({
-            replace: function(v,f,i){ return v.replace(/Ariel/gi, 'Arial');  },
-            prepend: ["PT Sans", 'Helvetica Neue'],
-            append: 'sans-serif',
-            ignore: ['Courier New', '!important', 'inherit'],
-        })))
-        .pipe(gulp.dest('dist/css'))
- 
+```javascript
+var rework = require('gulp-rework');
+rework.fontNames = require('rework-font-names');
+
+return gulp.src('app/styles/main.css')
+    .pipe(rework(rework.fontNames({
+        replace: function(v,f,i){ return v.replace(/Ariel/gi, 'Arial');  },
+        prepend: ["PT Sans", 'Helvetica Neue'],
+        append: 'sans-serif',
+        ignore: ['Courier New', '!important', 'inherit'],
+    })))
+    .pipe(gulp.dest('dist/css'))
+```
+
 Will turn
 
-    html {
-      font: bold 16px/1.4em Ariel, "Helvetica";
-    }
-    
-    body {
-      font-family: Ariel; 
-    }
-    
-    #wrapper {
-      font: 'courier new';
-    }
-    
-    .button {
-      font-family: Tahoma !important;
-    }
+```css
+html {
+  font: bold 16px/1.4em Ariel, "Helvetica";
+}
+
+body {
+  font-family: Ariel; 
+}
+
+#wrapper {
+  font: 'courier new';
+}
+
+.button {
+  font-family: Tahoma !important;
+}
+```
     
 Into 
 
-    html {
-      font: bold 16px/1.4em "PT Sans", "Helvetica Neue", Arial, "Helvetica", sans-serif;
-    }
-    
-    body {
-      font-family: "PT Sans", "Helvetica Neue", Arial, sans-serif; 
-    }
-    
-    #wrapper {
-      font: 'courier new';
-    }
-    
-    .button {
-      font-family: Tahoma !important
-    }
+```css
+html {
+  font: bold 16px/1.4em "PT Sans", "Helvetica Neue", Arial, "Helvetica", sans-serif;
+}
+
+body {
+  font-family: "PT Sans", "Helvetica Neue", Arial, sans-serif; 
+}
+
+#wrapper {
+  font: 'courier new';
+}
+
+.button {
+  font-family: Tahoma !important
+}
+```
